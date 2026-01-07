@@ -1,14 +1,14 @@
 #!/bin/bash
 
-VERSION="6.16.9"
+VERSION="6.18.3"
 
 ROOT="$PWD"
-TARBALL="linux-${VERSION}.tar.xz"
-TARBALLURL="https://cdn.kernel.org/pub/linux/kernel/v${VERSION:0:1}.x/${TARBALL}"
+TARBALL="linux-6.18.3.tar.xz"
+TARBALLURL="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.3.tar.xz"
 
 curl -LO $TARBALLURL
 tar -xf $TARBALL
-cd linux-${VERSION}
+cd linux-6.18.3
 
 for patch in $(ls $ROOT/patches)
 do
